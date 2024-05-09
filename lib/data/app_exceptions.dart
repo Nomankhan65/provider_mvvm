@@ -40,3 +40,16 @@ class  FetchDataException extends AppExceptions {
   FetchDataException([String? message])
       :super(message, 'Error While Communication');
 }
+
+class  BadRequestException extends AppExceptions {
+
+  BadRequestException([String? message])
+      :super(message, 'Invalid request');
+}
+
+class  UnAuthorisedException extends AppExceptions {
+
+  UnAuthorisedException([String? message])
+      :super(message, 'Unauthorised access');
+}
+
