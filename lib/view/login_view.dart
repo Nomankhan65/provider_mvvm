@@ -35,6 +35,7 @@ class _LoginViewState extends State<LoginView> {
     print('build');
     return Scaffold(
       appBar:AppBar(
+        automaticallyImplyLeading: false,
         title:const Text('Login view'),
       ),
       body: Column(
@@ -107,9 +108,6 @@ Consumer<LoginViewModel>(builder: (context,val,child){
         }
       }, title:'Login');
 }),
-          TextButton(onPressed: (){
-            Navigator.pushNamed(context, RoutesName.signupScreen);
-          }, child: const Text('sign up'))
       ],
       ),
     );
