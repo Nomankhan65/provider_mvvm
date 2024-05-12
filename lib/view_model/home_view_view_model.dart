@@ -19,7 +19,7 @@ class HomeViewViewModel with ChangeNotifier{
   Future<void> getMoviesListApi()async{
     setMoviesList(ApiResponse.loading());
 
-    _homeRepo.loginApi().then((value) {
+   await _homeRepo.loginApi().then((value) {
       setMoviesList(ApiResponse.completed(value));
     }).onError((error, stackTrace) {
       setMoviesList(ApiResponse.error(error.toString()));
